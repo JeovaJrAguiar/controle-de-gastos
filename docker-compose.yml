@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  xampp-web:
+    container_name: xampp-web
+    image: tomsik68/xampp
+    ports:
+      - "8081:80"
+      - "3306:3306"
+    restart: always

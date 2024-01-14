@@ -1,0 +1,93 @@
+<div class="main-container">
+    <div class="header">
+        <div class="container">
+            <div class="row col-lg-10">
+                    <div class="title">Controle Financeiro</div>
+                  <div class=" text-end">
+                    <button style="background-color: #a458df; color: #fefeff; border: none; border-radius: 5px; padding: 10px 15px; cursor: pointer;" class="btn btn-light" type="submit">{{ userName }}</button>
+                  </div>
+            </div>
+        </div>
+    </div>
+  
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10">
+                <div class="float-container">
+                    <button  type="button"  class="btn  float-box" data-toggle="modal" data-target="#exampleModalCenter" id="entradas">
+                        <div>Entradas <-</div>
+                        <div>
+                            <h2>R$ {{ totalEntradas }}</h2>
+                        </div>
+                    </button >
+                    <button  type="button"  class="btn  float-box" data-toggle="modal" data-target="#exampleModalCenter" id="saidas">
+                        <div>Saídas -></div>
+                        <div>
+                            <h2>R$ {{ totalSaidas }}</h2>
+                        </div>
+                    </button>
+                    <button  type="button"  class="btn  float-box" data-toggle="modal" data-target="#exampleModalCenter" id="total">
+                        <div>Total $</div>
+                        <div>
+                            <h2>R$ {{ totalAtual }}</h2>
+                        </div>
+                      </button>
+                </div>
+                <div class="table-section">
+                    <table class="data-table">
+                      <thead>
+                        <tr>
+                          <th>Descrição</th>
+                          <th>Preço</th>
+                          <th>Categoria</th>
+                          <th>Data</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Aqui você preenche dinamicamente as linhas da tabela -->
+                        <tr>
+                          <td>Caneta de prata</td>
+                          <td>R$ 100,00</td>
+                          <td>Estudo</td>
+                          <td>01/01/2023</td>
+                        </tr>
+                        <tr>
+                          <td>Feira do Semestre</td>
+                          <td>R$ 6000,00</td>
+                          <td>Alimentação</td>
+                          <td>01/01/2023</td>
+                        </tr>
+                        <tr>
+                          <td>NOtebook</td>
+                          <td>R$ 2200,00</td>
+                          <td>Estudo</td>
+                          <td>2/04/2023</td>
+                        </tr>
+                        <tr>
+                          <td>Caderno</td>
+                          <td>R$ 70,00</td>
+                          <td>Estudo</td>
+                          <td>02/06/2023</td>
+                        </tr>
+                        <tr>
+                          <td>Mochila Nike</td>
+                          <td>R$ 370,00</td>
+                          <td>Estudo</td>
+                          <td>23/09/2023</td>
+                        </tr>
+                        <tr>
+                          <td>Churrasco</td>
+                          <td>R$ 120,00</td>
+                          <td>Alimentação</td>
+                          <td>23/05/2023</td>
+                        </tr>
+                        <!-- Adicione mais linhas conforme necessário -->
+                      </tbody>
+                    </table>
+                  </div>
+            </div>
+        </div>
+
+    </div>
+  </div>
+

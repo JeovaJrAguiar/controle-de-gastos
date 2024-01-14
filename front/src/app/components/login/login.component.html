@@ -1,0 +1,20 @@
+<main class="text-center">
+    <div class="form-signin w-100 m-auto" style="margin-top: 40px !important;">
+        <h2 class="h3 mb-3 fw-normal">Login</h2>
+        
+        <div class="form-floating">
+            <input [(ngModel)]="mail" id="floatingInput" class="form-control" type="email" placeholder="name@example.com"/>
+            <label for="floatingInput">Mail</label>
+        </div>
+        <div class="form-floating">
+            <input [(ngModel)]="password" id="floatingPassword" class="form-control" type="password" placeholder="name@example.com"/>
+            <label for="floatingPassword">Password</label>
+        </div>
+        
+        
+        <button (click)=login() class="w-100 btn btn-lg btn-primary">Login</button>
+
+        <label >Don't have account.</label>
+        <p style="color: red;"><b>{{loginFailMessage}}</b></p>
+    </div>
+</main>
