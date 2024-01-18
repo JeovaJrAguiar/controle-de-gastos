@@ -1,8 +1,57 @@
+/*  ==================================
+    Paleta de Cores:
+    ----------------
+    Violeta: #8625d2,
+    Cinza-claro: #f0f2f5,
+    Cinza-medio: #9499aa,
+    Branco-fino: #fefeff,
+
+
+    Ordem de atributos:
+    --------------------
+    1 - atributos de espacamento
+    2 - atributos de posicionamento
+    3 - atributos relacionados a cores
+    4 - atributos de acao
+    5 - demais atributos
+
+    Ordem das estilizacoes define-se pela arvore DOM
+  ================================== */
+
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
+  }
+
+@media (min-width: 1200px) {
+  .container-default {
+    max-width: 1140px;
+  }
+}
+  
+@media (min-width: 992px) {
+  .container-default {
+    max-width: 960px;
+  }
+}
+  
+@media (min-width: 768px) {
+  .container-default {
+    max-width: 720px;
+  }
+}
+  
+@media (min-width: 576px) {
+  .container-default {
+    max-width: 540px;
+  }
+}
+  
+  .header-position {
+    display: flex;
+    flex-direction: column ;
   }
   
   .main-container {
@@ -12,63 +61,118 @@ body, html {
     background-color: transparent;
     display: flex;
     flex-direction: column;
+    
+    background-color: #f0f2f5;
   }
   
   .header {
     height: 10rem;
     width: 100%;
-    background-color: #8625d2;
+    padding-top: 30px;
+    
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
     display: inline-block;
+    
+    background-color: #8625d2;
   }
 
   .float-container {
+    margin-top: -35px;
+
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 20px; /* Adicione esta linha para separar a tabela do float-container */
+
+    margin-bottom: 20px;
+  }  
+  
+  .float-box {
+    font-weight: 300;
+    min-width: 30%;
+    padding: 10px 20px;
+    padding-top: 5px;
+    border-radius: 3px;
+    color: #363f5f;
+    border: 1px solid #fff;
+    background-color: #fff;
+  }
+
+  .float-box span {
+    font-size: small;
+    font-weight: 500;
+  }
+
+  .float-box h2 {
+    font-size:xx-large;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .navbar .bi-arrow-up-circle {
+    color: #33cc95;
+  }
+
+  .navbar .bi-arrow-down-circle {
+    color: #e84863;
+  }
+
+
+  #total {
+    background-color: #33cc95;
+    border: solid 1px #33cc95;
+    color: #fff;
   }
 
   #body-content {
     height: 75%;
     width: 80%;
-    background-color: #f0f2f5;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    background-color: #f0f2f5;
   }
-  
-  
-  .float-box {
-    margin-right: 5em;
-    padding: 10px;
-    border: 1px solid #9499aa;
-    border-radius: 5px;
-  }
+
   
   .title {
+    font-size: 25px;
+    font-weight: 300;
     color: #fefeff;
-    font-size: 20px;
   }
   
   .action-button {
-    background-color: #a458df;
-    color: #fefeff;
     border: none;
     border-radius: 5px;
     padding: 10px 15px;
     cursor: pointer;
+    background-color: #a458df;
+    color: #fefeff;
+  }
+
+  .user-button {
+    border-radius: 5px; 
+    padding: 10px 15px; 
+    font-weight: 300;
+    border: none; 
+    cursor: pointer;
+    
+    background-color: #a458df; 
+    color: #fefeff; 
+  }
+
+  .user-button:hover {
+    background-color: #731fb5;
   }
   
   #body-content {
     height: 75%;
     width: 100%;
-    background-color: #f0f2f5;
     display: flex;
     flex-direction: column;
     padding: 20px;
+    background-color: #f0f2f5;
   }
   
   .content-sections {
@@ -79,10 +183,10 @@ body, html {
   }
   
   .content-section {
-    background-color: #fefeff;
     border-radius: 5px;
     margin-bottom: 10px;
     padding: 10px;
+    background-color: #fefeff;
   }
   
   .table-section {
@@ -95,10 +199,10 @@ body, html {
   }
   
   .data-table th {
-    color: #9499aa;
-    border-bottom: 2px solid #9499aa;
     padding: 10px;
     border-radius: 5px;
+    color: #9499aa;
+    border-bottom: 2px solid #9499aa;
   }
   
   .data-table td {
@@ -112,5 +216,4 @@ body, html {
   top: 5em;
 
   box-sizing: border-box;
-  
 }
