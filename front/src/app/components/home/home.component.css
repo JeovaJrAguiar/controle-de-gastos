@@ -58,57 +58,55 @@ body, html {
     min-height: 100vh;
     width: 100%;
     margin: 0 auto;
+
+    background-color: #f0f2f5;
     background-color: transparent;
     display: flex;
     flex-direction: column;
-    
-    background-color: #f0f2f5;
   }
   
   .header {
     height: 10rem;
     width: 100%;
     padding-top: 30px;
-    
-
-    display: flex;
     justify-content: space-between;
     align-items: center;
     display: inline-block;
-    
+
     background-color: #8625d2;
+    display: flex;
+    
   }
 
   .float-container {
     margin-top: -35px;
-
+    margin-bottom: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
-    margin-bottom: 20px;
   }  
   
   .float-box {
-    font-weight: 300;
-    min-width: 30%;
     padding: 10px 20px;
     padding-top: 5px;
-    border-radius: 3px;
+    min-width: 30%;
     color: #363f5f;
     border: 1px solid #fff;
     background-color: #fff;
+    border-radius: 3px;
+    font-weight: 300;
   }
 
   .float-box span {
-    font-size: small;
     font-weight: 500;
+    font-size: small;
   }
 
   .float-box h2 {
-    font-size:xx-large;
     margin: 0px;
     padding: 0px;
+    font-size:xx-large;
   }
 
   .navbar .bi-arrow-up-circle {
@@ -143,17 +141,17 @@ body, html {
   }
   
   .action-button {
-    border: none;
     border-radius: 5px;
     padding: 10px 15px;
+    border: none;
     cursor: pointer;
     background-color: #a458df;
     color: #fefeff;
   }
 
   .user-button {
-    border-radius: 5px; 
     padding: 10px 15px; 
+    border-radius: 5px; 
     font-weight: 300;
     border: none; 
     cursor: pointer;
@@ -169,9 +167,9 @@ body, html {
   #body-content {
     height: 75%;
     width: 100%;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    padding: 20px;
     background-color: #f0f2f5;
   }
   
@@ -183,9 +181,9 @@ body, html {
   }
   
   .content-section {
+    padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
-    padding: 10px;
     background-color: #fefeff;
   }
   
@@ -206,9 +204,9 @@ body, html {
   }
   
   .data-table td {
-    border-bottom: 1px solid #9499aa;
     padding: 10px;
     border-radius: 5px;
+    border-bottom: 1px solid #9499aa;
   }
   
 .sobreposition-box {
