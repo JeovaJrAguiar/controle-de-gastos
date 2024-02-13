@@ -5,6 +5,7 @@
     Cinza-claro: #f0f2f5,
     Cinza-medio: #9499aa,
     Branco-fino: #fefeff,
+    Cinza-claro-light: f2f2f2
 
 
     Ordem de atributos:
@@ -164,6 +165,16 @@ body, html {
     background-color: #731fb5;
   }
   
+  .user-button:active {
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .statusMoneyCard:hover {
+    border: solid 1px #f2f2f2;
+    background-color: #f2f2f2;
+  }
+
   #body-content {
     height: 75%;
     width: 100%;
