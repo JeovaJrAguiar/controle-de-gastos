@@ -5,7 +5,8 @@
     Cinza-claro: #f0f2f5,
     Cinza-medio: #9499aa,
     Branco-fino: #fefeff,
-    Cinza-claro-light: f2f2f2
+    Cinza-claro-light: #f2f2f2,
+    Branco-fundo-pagina: #f2f0F5 
 
 
     Ordem de atributos:
@@ -25,6 +26,10 @@ body, html {
     height: 100%;
     width: 100%;
   }
+
+ .bg-color-default {
+  background-color: #f2f0f5;
+ }
 
 @media (min-width: 1200px) {
   .container-default {
