@@ -2,6 +2,7 @@
     Paleta de Cores:
     ----------------
     Branco: #ffffff,
+    Branco-fundo-pagina: #f2f0F5 
 
     Ordem de atributos:
     --------------------
@@ -87,9 +88,9 @@
 }
 
 main {
-    padding-top: 40px;
+    padding-top: 12%;
     padding-bottom: 40px;
     display: flex;
     align-items: center;
-    background-color: #ffffff;
+    background-color: #f2f0F5;
 }
