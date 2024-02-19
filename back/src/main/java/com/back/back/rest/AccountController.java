@@ -46,6 +46,9 @@ public class AccountController {
             String mailFromHeader = userAndPassword[0];
             String passwordFromHeader = userAndPassword[1];
 
+            // codificar com hash
+            passwordFromHeader = passwordFromHeader;
+
             Optional<Account> optionalAccount = accountRepository.findByMailAndPassword(mailFromHeader, passwordFromHeader);
             if (optionalAccount.isPresent()) {
                 Map<String, String> response = Collections.singletonMap("status", "success");
