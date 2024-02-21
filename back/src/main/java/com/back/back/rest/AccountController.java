@@ -23,6 +23,8 @@ import com.back.reponse.ApiResponse;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Collections;
 import java.util.Map;
 
@@ -34,7 +36,9 @@ public class AccountController {
    ApiResponse apiResponse = new ApiResponse();
 
    @GetMapping("/login")
-    public ResponseEntity<Map<String, String>> login(@RequestHeader HttpHeaders headers){
+    public ResponseEntity<Map<String, String>> login(@RequestHeader HttpHeaders headers) throws NoSuchAlgorithmException{
+        MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
+        
         String authorizationHeader = headers.getFirst(HttpHeaders.AUTHORIZATION);
         
         if (authorizationHeader != null && authorizationHeader.startsWith("Basic")) {
@@ -46,6 +50,12 @@ public class AccountController {
             String mailFromHeader = userAndPassword[0];
             String passwordFromHeader = userAndPassword[1];
 
+<<<<<<< Updated upstream
+=======
+            messageDigest.update(passwordFromHeader.getBytes());
+            passwordFromHeader = new String(messageDigest.digest());
+
+>>>>>>> Stashed changes
             Optional<Account> optionalAccount = accountRepository.findByMailAndPassword(mailFromHeader, passwordFromHeader);
             if (optionalAccount.isPresent()) {
                 Map<String, String> response = Collections.singletonMap("status", "success");
