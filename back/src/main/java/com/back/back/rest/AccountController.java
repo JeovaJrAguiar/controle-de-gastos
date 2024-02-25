@@ -50,12 +50,9 @@ public class AccountController {
             String mailFromHeader = userAndPassword[0];
             String passwordFromHeader = userAndPassword[1];
 
-<<<<<<< Updated upstream
-=======
             messageDigest.update(passwordFromHeader.getBytes());
             passwordFromHeader = new String(messageDigest.digest());
 
->>>>>>> Stashed changes
             Optional<Account> optionalAccount = accountRepository.findByMailAndPassword(mailFromHeader, passwordFromHeader);
             if (optionalAccount.isPresent()) {
                 Map<String, String> response = Collections.singletonMap("status", "success");
@@ -90,14 +87,20 @@ public class AccountController {
    }
 
    @PostMapping()
-   public ResponseEntity<ApiResponse> addAccount(@RequestBody AccountDTO accountDTO){
+   public ResponseEntity<ApiResponse> addAccount(@RequestBody AccountDTO accountDTO) throws NoSuchAlgorithmException{
         Optional<Account> accountOpt = accountRepository.findAccountByMail(accountDTO.getMail());
         
         if(accountOpt.isEmpty()){
+            MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
+            String passwordHash = accountDTO.getPassword();
+
+            messageDigest.update(passwordHash.getBytes());
+            passwordHash = new String(messageDigest.digest());
+
             Account account = new Account(
                 accountDTO.getUsername(),
                 accountDTO.getMail(),
-                accountDTO.getPassword(),
+                passwordHash,
                 accountDTO.getFullName(),
                 accountDTO.getDocumentNumber(),
                 accountDTO.getAddress()
