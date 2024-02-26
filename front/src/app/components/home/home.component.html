@@ -5,7 +5,19 @@
                   <span class="title">
                     Controle Financeiro
                   </span>
-                  <button class="user-button btn"type="submit">{{ userName }}</button>
+
+                  <div class="dropdown">
+                    <a class="user-button btn btn-secondary dropdown-toggle"  role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      {{ userName }}
+                    </a>  
+                  
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item" href="#">Editar Perfil</a>
+                      <a class="dropdown-item" href="#">Configurações</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Sair</a>
+                    </div>
+                  </div>
               </nav>
         </div>
     </div>
