@@ -4,6 +4,7 @@ import { Account } from '../../entities/account.model';
 import { StorageService } from '../../services/storage/storage.service';
 import { Router } from '@angular/router';
 import { Transaction } from '../../entities/transaction.model';
+import { LoginService } from '../../services/login/login.service';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +14,8 @@ import { Transaction } from '../../entities/transaction.model';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+
+
   accountInstance: Account | undefined;
   userName: string = 'User';
   mail: string = 'user@user.com';
@@ -22,11 +25,13 @@ export class HomeComponent {
   totalSaidas: number = 0.0;
   totalAtual: number = 0.0;
   transactions: Transaction[] = [];
+  storageService: any;
 
   constructor(
     private accountService: AccountServiceService,
     private router: Router,
-    private localStorage: StorageService
+    private localStorage: StorageService,
+    private loginService: LoginService,
   ){}
   ngOnInit(): void {
     var authorization = this.localStorage.get('authorization');
@@ -85,5 +90,10 @@ export class HomeComponent {
     }
 
     
+  }
+
+  logout(): void {
+    this.loginService.logout();
+    this.router.navigate(['/login']);
   }
 }

@@ -20,7 +20,7 @@ export class LoginComponent {
   //loginService: LoginService = new LoginService();
   constructor(
     private loginService: LoginService,
-    private router: Router
+    private router: Router,
     ) { }
 
   ngOnInit(): void {
@@ -46,5 +46,9 @@ export class LoginComponent {
       console.log('Excessão no login')
       this.loginFailMessage = "Erro. Usuario ou senha não cadastrado.";
     });
+  }
+
+  logout(){
+    this.loginService.logout();
   }
 }

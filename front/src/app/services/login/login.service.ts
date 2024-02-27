@@ -31,4 +31,9 @@ export class LoginService {
       })
     );
   }
+
+  logout() {
+    this.localStorage.remove('authorization');
+    //this.localStorage.set('authorization', btoa(mail + ':' + password));
+  }
 }
